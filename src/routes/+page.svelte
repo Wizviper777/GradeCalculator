@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let count = 0;
+    $: doubled = count * 2;
+</script>
+
+<h1>Grade Calculator</h1>
+<button on:click={() => count += 1}>
+    Clicked {count} {count === 1 ? 'time' : 'times'}
+    (Double is {doubled})
+</button>
+
+
+
+
